@@ -1,0 +1,70 @@
+/*
+MAIN FONT:
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,600,800&display=swap');
+
+//Schrift Dicke
+
+  h1 > font-weight: 800 / font-size: 3rem (30pt)
+  h2 > font-weight: 600 / font-size: 2rem (20pt)
+  h3 > font-weight: 600 / font-size: 1.4rem (14pt)
+  Fließtext: font-weight: 300 / font-size: 1.4rem (14pt)
+
+
+  //Woocommerce
+  Produkttitle: font-weight 600 / 24pt (2.4rem)
+  Preis: Kursiv
+  
+  Fließtext: Line-height: 20pt / 2rem
+
+  Produktdetails: line height: 30pt / 3rem
+  Produktfarben auswahl: 28pt Durchmesser / 2.8rem / rund
+  Bei auswahl, Kreis herum mit Abstand 4pt / .4rem
+  Abstand von Kreis / Kreis -> 15pt / 1.5rem
+
+  Abstand Produktdetail Infos = 58pt
+
+*/
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+div,
+main,
+nav,
+a,
+span,
+b,
+strong {
+}
+h1 {
+  text-transform: uppercase;
+  font-size: $font-size-heading--primary;
+  font-weight: $font-weight-heading--primary;
+  line-height: $font-size-heading--primary * 1.2;
+}
+h2 {
+  font-size: $font-size-heading--secondary;
+  font-weight: $font-weight-heading--secondary;
+  line-height: $font-size-heading--secondary * 1.2;
+}
+h3 {
+}
+h4,
+h5,
+h6 {
+}
+
+.sidenav li {
+  text-transform: uppercase;
+}

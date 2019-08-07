@@ -1,0 +1,60 @@
+$logo-path: "http://localhost:8888/margo/assets/img/MARGO_logo-.svg";
+
+/*
+ COLORS
+*/
+$pure-white: #fff;
+$page-background: #fafafa;
+$margo-black: #272727;
+
+$margo-champagne: #f7e7ce;
+$margo-champagne-2: #f7e0ce;
+$margo-blonde: #e4decd;
+$margo-dark: #1d1e22;
+$margo-link: #0b8dcc;
+
+//Overlay-color:
+$margo-overlay-white: #fff8;
+
+/*
+  TYPOGRAPHIE
+*/
+$letter-spacing--main: 0.1rem;
+$font-size-text: 1.2rem;
+$font-size-heading--primary: 2rem;
+$font-size-heading--secondary: 1.8rem;
+$font-size-heading--tertiary: 1.6rem;
+
+$font-weight-heading--primary: 800;
+$font-weight-heading--secondary: 600;
+$font-weight-heading--tertiary: 600;
+$font-weight-product-title: 600;
+$font-weight-text: 400;
+
+/*
+  SPACING
+*/
+
+$spacing-medium: 11rem;
+
+// spaciing headings
+$spacing-headings: 2.6rem;
+
+//Grid Spacing
+$spacing-grid: 9.2rem;
+
+/*
+ SHADOWS
+*/
+$box-shadow-hover: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+$shadow-depth-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+$shadow-depth-2: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+$shadow-depth-3: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+$shadow-depth-4: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+$shadow-depth-5: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+
+/* 
+ TRANSITION / ANIMATION
+*/
+$transition-button: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

@@ -1,0 +1,47 @@
+//Paths
+
+//CSS RESETS
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+//Imports
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,800&display=swap");
+
+main {
+  flex: 1 0 auto;
+}
+
+//Links
+
+a,
+a:visited,
+a:focus {
+  color: #272727;
+}
+/*Additional Color Mods (Gradients etc)*/
+
+.margo {
+  background: #ffefba; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ffefba); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7e0ce, #ffefba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.champagne {
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.clipped-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

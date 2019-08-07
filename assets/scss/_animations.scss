@@ -1,0 +1,20 @@
+@keyframes fadeInOutSlow {
+  0% {
+    display: block;
+    transform: translateY(6rem);
+    opacity: 0.1;
+  }
+  20% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    transform: translateY(6rem) scale(1);
+    opacity: 0.1;
+  }
+}

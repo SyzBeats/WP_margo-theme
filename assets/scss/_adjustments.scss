@@ -1,0 +1,179 @@
+.background {
+  padding: 2rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background img {
+  width: 100%;
+  padding: 1rem;
+}
+.wrap {
+  padding-left: 300px;
+}
+/**********
+NAVIGATION
+**********/
+
+//Brand Logo
+.brand-logo {
+  display: flex !important;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 5rem;
+  }
+}
+
+a.waves-effect.modal-trigger.right {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidenav li {
+  display: block;
+  margin: 1.5rem 0;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+/*
+.sidenav-trigger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  background: white;
+  border-radius: 100px;
+  padding: 1.15rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  color: #d5a168;
+  line-height: 1rem;
+  display: none;
+}
+*/
+
+.top-nav-mobile {
+  display: none;
+  height: 11rem;
+  z-index: 10000;
+  position: relative;
+  box-shadow: none;
+  & .nav-wrapper {
+    box-shadow: 0px 1px 7px rgba(100, 100, 100, 0.3);
+    z-index: 100;
+  }
+  & #nav-mobile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sidenav-trigger,
+.sidenav-trigger-close {
+  display: none;
+}
+
+.current_page_item {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#entry-content {
+  padding: 1.5rem;
+}
+.home #entry-content {
+  padding: 0;
+}
+
+#page-title {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+//Sidewidgets
+
+.side-widgets {
+  position: fixed;
+  top: 6rem;
+  right: 0rem;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.side-widget_icon {
+  color: #272727;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.side-widget {
+  width: 10rem;
+  background: white;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
+  background: white;
+  margin: 1rem 0;
+  transform: translateX(5rem);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.365);
+  &:hover {
+    transform: translateX(1rem);
+  }
+}
+
+.before_shop_item_title div.star-rating {
+  display: none !important;
+}
+
+// Instagram
+
+/*ONLINE ADJUSTMENTS*/
+
+#sb_instagram .sbi_photo_wrap {
+  position: relative;
+  box-shadow: $shadow-depth-1;
+}
+.sb_instagram_header.sbi_medium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.sbi_header_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sbi_follow_btn a {
+  background-color: $pure-white;
+  color: $margo-black;
+  box-shadow: $shadow-depth-1;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: $shadow-depth-2;
+  }
+}
+// Footer
+
+footer {
+  margin-left: 300px;
+  border-top: 1px solid grey;
+}
+
+.footer_payment {
+  padding: 1.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

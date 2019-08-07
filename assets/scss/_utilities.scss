@@ -1,0 +1,80 @@
+/*Spacing - padding*/
+
+.p {
+  &-0 {
+    padding: 0rem;
+  }
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+}
+
+.px {
+  &-0 {
+    padding: initial 0rem;
+  }
+  &-1 {
+    padding: initial 1rem;
+  }
+  &-2 {
+    padding: initial 2rem;
+  }
+}
+
+.py {
+  &-0 {
+    padding: 0rem initial;
+  }
+  &-1 {
+    padding: 1rem initial;
+  }
+  &-2 {
+    padding: 2rem initial;
+  }
+}
+
+/*Spacing - margin*/
+
+.m {
+  &-0 {
+    margin: 0rem;
+  }
+  &-1 {
+    margin: 1rem;
+  }
+  &-2 {
+    margin: 2rem;
+  }
+}
+
+.mx {
+  &-0 {
+    margin: initial 0rem;
+  }
+  &-1 {
+    margin: initial 1rem;
+  }
+  &-2 {
+    margin: initial 2rem;
+  }
+}
+
+.my {
+  &-0 {
+    margin: 0rem initial;
+  }
+  &-1 {
+    margin: 1rem initial;
+  }
+  &-2 {
+    margin: 2rem initial;
+  }
+}
+
+.no-margin {
+  margin: 0 0 !important;
+  padding: 0 0 !important;
+}
