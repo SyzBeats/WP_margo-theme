@@ -9,17 +9,17 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
   <li>
     <div class="background">
-      <a href="/">
+      <a href="<?php echo home_url(); ?>">
         <picture class="no-vis-on-medium">
           <!-- <source srcset="http://localhost:8888/margo/assets/img/MARGO_logo-.svg" type="image/svg+xml"> -->
-          <img style="width: 10rem;" src="http://localhost:8888/margo/wp-content/uploads/2019/07/Download.jpg" alt="Margo Logo" lazy />
+          <img laoding="lazy" style="width: 10rem;" src="<?php echo home_url(); ?>/wp-content/uploads/2019/07/Download.jpg" alt="Margo Logo" />
         </picture>
       </a>
     </div>
   </li>
   <li class="hidden-on-medium">
     <a href="#mini-cart-modal" class="waves-effect modal-trigger"> <!-- Modal Trigger -->
-      <img class="mini-cart_icon" src="http://localhost:8888/margo/assets/img/shopicon-01.svg" alt="shopping icon" lazy />
+      <img laoding="lazy" class="mini-cart_icon" src="<?php echo home_url(); ?>/assets/img/shopicon-01.svg" alt="shopping icon" />
     </a>
     <!--WOOCOMMERCE CART COUNT-->
     <?php global $woocommerce; ?>
@@ -39,4 +39,13 @@
       "container" => ""
     ));
   ?>
+  <li>
+    <div class="divider">
+    </div>
+  </li>
+  <li class="waves-effect">
+    <a class="modal-trigger center" href="#search-modal">
+      <i class="fa fa-search"></i> 
+      </a>
+  </li>
 </ul>

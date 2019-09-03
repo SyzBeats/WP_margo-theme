@@ -33,14 +33,22 @@ a.waves-effect.modal-trigger.right {
   justify-content: center;
   align-items: center;
 }
-.sidenav li {
-  display: block;
-  margin: 1.5rem 0;
-  text-align: center;
-  &:hover {
-    cursor: pointer;
+.sidenav {
+  & li {
+    display: block;
+    margin: 1.5rem 0;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .fa-search {
+    font-size: 1.3rem;
+    float: none;
+    margin: 0;
   }
 }
+
 /*
 .sidenav-trigger {
   position: fixed;
@@ -121,7 +129,6 @@ a.waves-effect.modal-trigger.right {
 
 .side-widget {
   width: 10rem;
-  background: white;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
   background: white;
   margin: 1rem 0;
@@ -164,11 +171,41 @@ a.sbi_header_link {
     box-shadow: $shadow-depth-2;
   }
 }
-// Footer
 
+//SEARCH
+.searchform input[type="submit"] {
+  display: block;
+  text-align: center;
+  padding: 1rem 2rem;
+  color: $margo-black;
+  background: white;
+  width: 100%;
+  box-shadow: $shadow-depth-1;
+  transition: $transition-button;
+  &:hover {
+    box-shadow: $shadow-depth-2;
+    cursor: pointer;
+  }
+}
+#search-modal {
+  top: 35% !important;
+}
+// Footer
 footer {
   margin-left: 300px;
   border-top: 1px solid grey;
+  & .footer-links {
+    display: flex;
+    align-items: center;
+    & a {
+      margin: 0.2rem;
+    }
+  }
+  & .footer-copyright .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer_payment {

@@ -45,6 +45,18 @@ select.orderby {
   }
 }
 
+//pagination
+.woocommerce-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+
+  & .page-numbers {
+    color: #272727;
+  }
+}
+
 //minicart
 .mini-cart {
   &_icon {
@@ -142,6 +154,12 @@ img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 }
 .modal-content .quantity {
   flex: 2;
+}
+
+.modal-content {
+  & .total {
+    margin-top: 1rem;
+  }
 }
 
 .modal-content a.button.wc-forward {
@@ -316,8 +334,15 @@ button.single_add_to_cart_button.button.alt {
 .summary.entry-summary {
   padding-top: 5rem;
   padding-right: 7.5rem;
-  & .price {
-    margin-top: -1.5rem;
+  & .price,
+  #german-market-variation-price {
+    margin-top: -1.5rem !important;
+    & .wgm-info {
+      text-align: left;
+    }
+    & .wgm-info.woocommerce-de_price_taxrate {
+      margin-top: 0.5rem;
+    }
   }
 }
 
@@ -339,13 +364,8 @@ button.single_add_to_cart_button.button.alt {
   margin: 2.5rem 0;
 }
 
-.related.products {
-  background-image: url(../img/MARGO_logo-.svg);
-  clear: both;
-  background-repeat: no-repeat;
-  background-size: 250%;
-  padding: 2rem 0;
-  background-position: left center;
+.related.products,
+.up-sells.upsells.products {
   clear: both;
   padding: 2rem 0;
   & h2 {
@@ -377,7 +397,7 @@ ol.flex-control-nav.flex-control-thumbs {
 SORTING
 **********/
 .woocommerce-ordering > * {
-  display: block;
+  display: none;
 }
 .woocommerce .woocommerce-ordering {
   margin: 2rem auto;
@@ -385,6 +405,7 @@ SORTING
   width: 50%;
   min-width: 20rem;
   max-width: 25rem;
+  display: none;
 }
 
 /***************
@@ -397,8 +418,8 @@ CATEGORY / ARCHIVE PAGES
   right: 10%;
   top: 5%;
   width: calc(3rem + 2vw);
-  max-width: 5rem;
   height: calc(3rem + 2vw);
+  max-width: 5rem;
   max-height: 5rem;
   display: flex;
   justify-content: center;
@@ -422,6 +443,13 @@ CATEGORY / ARCHIVE PAGES
   }
 }
 
+.tax-product_cat.archive #entry-content {
+  display: flex;
+  flex-direction: column;
+  & .term-description {
+    order: 10;
+  }
+}
 .woocommerce .term-description,
 .archive .page-title {
   text-align: center;

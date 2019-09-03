@@ -18,6 +18,16 @@
     <div class="modal-footer">
   </div>
 </div>
+<!-- SEARCH MODAL -->
+<div id="search-modal" class="modal">
+  <div class="modal-content">
+    <h4>SUCHE</h4>
+    <p>Gib deinen Suchbegriff unten ein</p>
+    <div class="searchform">
+      <?php get_search_form(true); ?>
+    </div>
+  </div>
+</div>
 <!-- THEME FOOTER-->
 <footer class="page-footer grey lighten-5">
   <div class="container">
@@ -42,7 +52,11 @@
   <div class="footer-copyright  grey darken-4">
     <div class="container">
     © 2019 MARGO München
-    <a class="grey-text text-lighten-4 right" href="#!">Mehr</a>
+    <div class="footer-links">
+
+      <a class="grey-text text-lighten-4" href="/service"> Service </a>
+      <a class="grey-text text-lighten-4" href="/retoure"> Retoure </a>
+    </div>
     </div>
   </div>
 </footer>

@@ -16,17 +16,17 @@
                 </li>
             </ul>
         <picture class="brand-logo center">
-             <img src="http://localhost:8888/margo/wp-content/uploads/2019/07/Download.jpg" alt="Margo Logo" />
+             <img loading="lazy" src="<?php echo home_url(); ?>/wp-content/uploads/2019/07/Download.jpg" alt="Margo Logo" />
         </picture>
         
         <a href="#mini-cart-modal" class="waves-effect modal-trigger right"> <!-- Modal Trigger -->
-            <img class="mini-cart_icon" src="http://localhost:8888/margo/assets/img/shopicon-01.svg" alt="shopping icon" lazy />
+            <img loading="lazy" class="mini-cart_icon" src="<?php echo home_url(); ?>/assets/img/shopicon-01.svg" alt="shopping icon" />
         </a>
         </div>
     </nav>
         
     <aside class="side-widgets">
-        <a href="#">
+        <a href="<?php echo home_url(); ?>/about">
             <div class="side-widget side-widget_about">
                 <span class="side-widget_icon">
                     ABOUT
@@ -47,7 +47,7 @@
                 </span>
             </div>
         </a>
-        <a href="/margo/storefinder" >
+        <a href="<?php echo home_url(); ?>/storefinder" >
             <div class="side-widget side-widget_storefinder">
                 <span class="side-widget_icon">
                     STORE<br>FINDER

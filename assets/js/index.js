@@ -58,4 +58,17 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   }
+
+  // Click if URL contains "herren"
+  // Trigger click on URL "Herren"
+  let triggerWord = "herren";
+
+  if (document.location.toString().indexOf(triggerWord) !== -1) {
+    setTimeout(function() {
+      document.querySelectorAll('[data-value="schwarz"]').forEach(item => {
+        item.click();
+        console.log("clicked");
+      });
+    }, 500);
+  }
 });

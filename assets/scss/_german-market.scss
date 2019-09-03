@@ -1,0 +1,27 @@
+.wgm-info {
+  text-align: center;
+  font-size: 0.75rem;
+}
+.summary.entry-summary {
+  & .wgm-info {
+    text-align: left;
+  }
+  p.price {
+    margin-bottom: 0.5rem;
+  }
+}
+.modal {
+  .wgm-info {
+    margin: 0 2rem 0 1rem;
+  }
+}
+
+.cart_totals {
+  .amount {
+    font-weight: 600 !important;
+    font-size: 1.1rem;
+  }
+  span.woocommerce-Price-amount.amount {
+    font-size: 1.1rem;
+  }
+}

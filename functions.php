@@ -71,10 +71,11 @@ function add_product_category_subtitle(){
 	global $product;
 	if($product->get_sku()){
 	?>	
-		<p class="product_single_custom_meta">
+		<p class="product_single_custom_meta product_meta">
 			Material: <?php echo get_field("material") ?> <br/>
 			Ma&szlig;e: <?php echo $product->get_height() . get_option('woocommerce_dimension_unit') . " x " . $product->get_width() . get_option('woocommerce_dimension_unit') . " x " . $product->get_length() . get_option('woocommerce_dimension_unit'); ?> <br/>
-			Artikel-Nr.: <?php echo $product->get_sku(); ?> <br/>
+			Artikel-Nr.: <?php echo '<span class="sku">' . $product->get_sku() . '</span>'; ?><br/>
+
 		</p>
 	<?php
 	}
@@ -169,6 +170,45 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	}
 }
 
+//hide if male Category
+
+
+add_action( "wp", "check_if_male_category", 99 );
+
+function check_if_male_category(){
+	$url = $_SERVER["REQUEST_URI"];
+
+	$isMale = strpos($url, 'herren');
+
+	if ($isMale!==false) {
+		add_filter( 'woocommerce_loop_product_link', 'change_product_permalink_shop', 99, 2 );
+
+		function change_product_permalink_shop( $link, $product ) {
+			$newLink = str_replace("damen", "herren", $link);
+			return $newLink;
+		}
+	}
+}
+add_action("wp_head", "apply_style_to_male_page");
+
+function apply_style_to_male_page(){
+	$url = $_SERVER["REQUEST_URI"];
+	$isMale = strpos($url, 'herren');
+
+	if ($isMale!==false) {
+		echo "
+		<style>
+		li.variable-item{
+			display: none !important;
+		}
+		li[data-value='schwarz'],
+		li[data-value='Schwarz']{
+			display: flex !important;
+		}
+		</style>
+		";
+	}
+}
 
 /*------------
 REMOVE AND ADD
@@ -197,7 +237,8 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 15 );
+// Hidden as german Market interferes
+//add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 15 ); 
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 15 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 add_action( "woocommerce_single_product_summary", "add_product_category_subtitle", 25);
@@ -230,6 +271,17 @@ function change_product_recommendation_text($translated_text, $text, $domain) {
 	return $translated_text; 
 } 
 
+function change_product_upsells_text($translated_text, $text, $domain) {
+	$translated_text = str_replace("Das könnte dir auch gefallen", "Hierzu passende Artikel", $translated_text);
+	return $translated_text; 
+} 
+
+function change_variant_button_text($translated_text, $text, $domain) {
+	$translated_text = str_replace("Ausführung wählen", "Farbe w&auml;hlen", $translated_text);
+	return $translated_text; 
+} 
+
+
 add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
 function replace_loop_add_to_cart_button( $button, $product  ) {
     // Not needed for variable products
@@ -242,5 +294,8 @@ function replace_loop_add_to_cart_button( $button, $product  ) {
 }
 
 add_filter("gettext", "change_product_recommendation_text", 100, 3);
+add_filter("gettext", "change_product_upsells_text", 100, 3);
+add_filter("gettext", "change_variant_button_text", 100, 3);
 add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
 add_filter( 'woocommerce_product_tabs', 'remove_additional_information', 98 );
+
