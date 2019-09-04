@@ -209,6 +209,10 @@ function apply_style_to_male_page(){
 		";
 	}
 }
+// Product Sort in List
+add_action( 'init', function(){
+	add_post_type_support( 'product', 'page-attributes' );
+});
 
 /*------------
 REMOVE AND ADD
@@ -280,6 +284,7 @@ function change_variant_button_text($translated_text, $text, $domain) {
 	$translated_text = str_replace("Ausführung wählen", "Farbe w&auml;hlen", $translated_text);
 	return $translated_text; 
 } 
+
 
 
 add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );

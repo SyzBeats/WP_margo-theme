@@ -1,0 +1,50 @@
+.about-page {
+  &_heading {
+    display: flex;
+  }
+  &_text {
+    font-size: 1rem;
+  }
+  &_quote {
+    position: relative;
+    font-style: italic;
+    & strong {
+      font-weight: 700;
+    }
+    &::after {
+      content: "";
+      height: 10rem;
+      width: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../img/quote_left.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &::before {
+      content: "";
+      height: 10rem;
+      width: 10rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-image: url(../img/quote_right.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-page {
+    &_heading {
+      font-size: 1.2rem;
+    }
+    &_text {
+      font-size: 1rem;
+    }
+    &_topic {
+      padding-left: 0px !important;
+    }
+  }
+}

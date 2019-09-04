@@ -21,7 +21,7 @@
    <?php get_header(); ?>
       <main id="main" class="site-main" role="main">
         <div class="title-wrap card-panel p-0 m-0 ">
-          <h1 id="page-title" class="m-1 center"><?php the_title();?></h1>
+          <!-- <h1 id="page-title" class="m-1 center"><?php the_title();?></h1> -->
           <!--Breadcrumbs-->
           <?php
             if(is_page() && $post->post_parent){
